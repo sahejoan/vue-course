@@ -1,11 +1,10 @@
 <template>
    <div>
-    <h1>
-      Hola mundo
+
       <p v-if="contador <= 0" style="color: red">Numero Negativo:</p>
       <p v-else style="color: blue">Numero Positivo:</p>
       <p> {{ contador }}</p>
-    </h1>
+
     <button @click="incrementar">Incremento</button>
     <button @click="decrementar">Decremento</button>
    </div>
@@ -28,28 +27,7 @@ const  decrementar =() =>{
 </script>
 
 <style scoped>
-p{
-  text-align: center
-}
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
+ ive {
   color: var(--color-text);
 }
 
