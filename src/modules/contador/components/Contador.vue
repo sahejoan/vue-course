@@ -1,7 +1,7 @@
 <template>
    <div>
 
-      <p v-if="contador <= 0" style="color: red">Numero Negativo:</p>
+      <p v-if="contador <= 0" style="color: red">Numero Negativo o Cero:</p>
       <p v-else style="color: blue">Numero Positivo:</p>
       <p> {{ contador }}</p>
 

@@ -10,16 +10,7 @@
 
       </li>
     </ul>
-    <!-- <ul>
-      <li v-for="(task, index) in tasks" :key="index">
-        <label>
-          <input type="checkbox" v-model="task.completed" />
-          <span :class="{ completed: task.completed }">{{ task.name }}</span>
-        </label>
-      </li>
-    </ul>
-    <input v-model="newTask" @keyup.enter="addTask" placeholder="Nueva tarea" />
-    <button @click="addTask">Agregar Tarea</button> -->
+
   </div>
 </template>
 
@@ -37,7 +28,7 @@ const borraTarea = (index)=> {
 
 </script>
 
-<style>
+<style scoped>
 .task-list {
   font-family: Arial, sans-serif;
   max-width: 200px;
