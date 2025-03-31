@@ -4,12 +4,12 @@
     <Form :validation-schema="validationSchema" @submit="onSubmit">
       <div class="form">
         <label for="nombre">Nombre de usuario:</label>
-        <Field type="text" name="nombre" id="nombre"/>
+        <Field v-model="nombre" type="text" name="nombre" id="nombre" />
         <ErrorMessage name="nombre"></ErrorMessage>
       </div>
       <div class="form">
-        <label for="email">Correo electrónico:</label>
-        <Field type="email" name="correo" id="correo"/>
+        <label for="correo">Correo electrónico:</label>
+        <Field v-model="correo" type="email" name="correo" id="correo" />
         <ErrorMessage name="correo"></ErrorMessage>
       </div>
       <div class="form">
@@ -24,10 +24,19 @@
 <script setup>
 import { Form, Field, ErrorMessage  } from 'vee-validate';
 import validationSchema from '../schemas/validationSchema';
+import { useRegistrarStore } from '../stores/registrarStore';
+import { ref } from 'vue';
+
+const registrarStore = useRegistrarStore();
+const nombre = ref('');
+const correo = ref('');
+
+
 
 const onSubmit = () =>{
+    registrarStore.guardarRegistro(nombre.value, correo.value);
 
-  console.log('Se envio el furmulario');
+  console.log('Enviado');
 }
 
 </script>
